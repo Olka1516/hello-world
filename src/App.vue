@@ -1,7 +1,7 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="Welcome Olka2, to Your Vue.js App" />
-  <Button label="Submit" />
+  <Button label="Hello2" @click="handleClick" />
 </template>
 
 <script>
@@ -12,6 +12,15 @@ export default {
   components: {
     HelloWorld,
     Button,
+  },
+  setup() {
+    const handleClick = () => {
+      console.log("hello");
+    };
+
+    return {
+      handleClick,
+    };
   },
 };
 </script>
